@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css" />
+    <title>You Opened the Email</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>You opened the email and looked at it carefully</p>
+      <img src="images/fakeAmazonEmail.png" />
+      
+      <p>
+        Some common phishing emails contain bad grammar, a sense of urgency,
+        encouragement, false orders, card issues, or even bad logos. Can you spot any of
+        these traits? (Hint: There are 3)
+      </p>
+      <p>
+        <span id="correct-answers">0</span></p>
+        <input type="text" id="word-input" name="word-input" />
+        <br>
+        <button type="button" id="check-button" onclick="checkAnswer()">Check</button>
+      </p>
+      
+      <div id="success-buttons" style="display: none;">
+        <a href="DontOpenEmail.html"><button type="button">Close the Email</button></a>
+        <a href="YouOpenedTheEmailAnyways.html">        <button type="button">Visit the Link</button>
+        </a>
+      </div>
+      
+    </div>
+    <script>
+      let numCorrect = 0;
+      function checkAnswer() {
+        const input = document.getElementById("word-input").value.toLowerCase();
+
+        if (
+          input === "bad grammar" ||
+          input === "grammar" ||
+          input === "urgency" ||
+          input === "sense of urgency" ||
+          input === "card issue" ||
+          input === "card"
+        ) {
+          console.log("correct");
+          numCorrect++;
+          document.getElementById("word-input").value = "";
+        } else {
+          console.log("try again");
+          document.getElementById("word-input").value = "";
+        }
+
+        document.getElementById("correct-answers").textContent = numCorrect;
+
+        if (numCorrect === 3) {
+          document.getElementById("success-buttons").style.display = "flex";
+          document.getElementById("correct-answers").textContent = "You Got Them All!";
+          const button = document.getElementById("check-button");
+          button.parentNode.removeChild(button);
+          const inputField = document.getElementById("word-input");
+          inputField.parentNode.removeChild(inputField);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+* {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body {
+  background-color: rgb(5, 5, 10);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+h1 {
+  font-size: 50px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+.container {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.container p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  width: 50%;
+}
+
+button {
+  background-color: #4b0082; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Large padding */
+  font-size: 16px; /* Increased font size */
+  border: none; /* Remove border */
+  border-radius: 6px; /* Rounded corners */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block */
+  cursor: pointer; /* Add cursor on hover */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition-duration: 0.4s; /* Add animation on hover */
+}
+
+button:hover {
+  background-color: #3a0f5f; /* Dark green background on hover */
+}
+
+ul {
+  font-size: 35px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.choice {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+.split-buttons {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container p.lost {
+  margin: 0px;
+  font-size: 100px;
+  font-weight: bold;
+  color: red;
+}
+
+.container p.won {
+  margin: 0px;
+  font-size: 100px;
+  font-weight: bold;
+  color: lime;
+}
+
+img {
+  width: 500px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#success-buttons {
+  width: 350px;
+  justify-content: space-between;
+  padding: none;
+}
