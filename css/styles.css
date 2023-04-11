@@ -70,14 +70,28 @@ li {
   font-size: 25px;
 }
 .choice {
-  width: 35%;
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 .split-buttons {
-  width: 20%;
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.split-buttons button {
+  margin: 0;
 }
 
 .container p.lost {
