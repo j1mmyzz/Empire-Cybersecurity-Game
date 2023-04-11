@@ -9,14 +9,14 @@ body {
   color: white;
 }
 h1 {
-  font-size: 50px;
+  font-size: 30px;
 }
 a {
   color: white;
   text-decoration: none;
 }
 a:visited {
-  color: white;
+  color: purple;
 }
 .container {
   width: 1000px;
@@ -32,8 +32,9 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 30px;
-  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  width: 85%;
 }
 
 button {
@@ -69,16 +70,7 @@ ul {
 li {
   font-size: 25px;
 }
-.choice {
-  width: 100%;
-  max-width: 400px;
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
+
 .split-buttons {
   width: 100%;
   max-width: 400px;
