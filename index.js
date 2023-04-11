@@ -47,7 +47,7 @@ function checkAnswer() {
 }
 
 //checkpassword
-function checkAnswer() {
+function checkPassword() {
   // Get the input password
   var password = document.getElementById("newpassword").value;
 
