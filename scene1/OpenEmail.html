@@ -34,9 +34,12 @@
     </div>
     <script>
       let numCorrect = 0;
+      let previousInput = ""; // Initialize the previous input variable
+      
       function checkAnswer() {
-        const input = document.getElementById("word-input").value.toLowerCase();
-
+        const input = document.getElementById("word-input").value.toLowerCase().trim();
+        let message = ""; // Initialize the message variable
+        
         if (
           input === "bad grammar" ||
           input === "grammar" ||
@@ -44,19 +47,21 @@
           input === "sense of urgency" ||
           input === "card issue" ||
           input === "card issues" ||
-          input === "card" ||
           input === "card"
         ) {
-          console.log("correct");
-          numCorrect++;
-          document.getElementById("word-input").value = "";
+          if (input === previousInput) {
+            message = "You already said that";
+          } else {
+            console.log("correct");
+            numCorrect++;
+            previousInput = input;
+            document.getElementById("word-input").value = "";
+          }
         } else {
           console.log("try again");
+          previousInput = "";
           document.getElementById("word-input").value = "";
         }
-
-        document.getElementById("correct-answers").textContent = numCorrect;
-
         if (numCorrect === 3) {
           document.getElementById("success-buttons").style.display = "flex";
           document.getElementById("correct-answers").textContent = "You Got Them All!";
@@ -64,7 +69,11 @@
           button.parentNode.removeChild(button);
           const inputField = document.getElementById("word-input");
           inputField.parentNode.removeChild(inputField);
+        } else {
+          message = message || `${numCorrect} correct`;
+          document.getElementById("correct-answers").textContent = message;
         }
+        document.getElementById("message").textContent = message; // Update the message element
       }
     </script>
   </body>
