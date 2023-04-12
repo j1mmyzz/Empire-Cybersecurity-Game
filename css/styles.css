@@ -115,3 +115,13 @@ input[type="text"] {
   justify-content: space-between;
   padding: none;
 }
+.side-by-side {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.side-by-side-images img {
+  width: 390px; /* set the desired width for both images */
+  height: 100px; /* set the height to 'auto' to maintain the aspect ratio */
+}
