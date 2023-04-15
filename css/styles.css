@@ -3,7 +3,8 @@
   margin-bottom: 20px;
 }
 body {
-  background-color: rgb(5, 5, 10);
+  background-color: black;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   color: white;
@@ -148,4 +149,18 @@ input[type="text"] {
 }
 .underline {
   text-decoration: underline;
+}
+
+/*Animatied Background*/
+.binary {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  z-index: -1;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-animation-duration: 1s;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  color: white;
+  text-shadow: 0 0 10px #e2baff;
 }
