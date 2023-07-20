@@ -49,12 +49,12 @@ function checkAnswer() {
 //checkpassword
 function checkPassword() {
   // Get the input password
-  var password = document.getElementById("newpassword").value;
+  let password = document.getElementById("newpassword").value;
 
   // Set up regular expressions for checking password criteria
-  var minLength = 10;
-  var numberRegex = /\d/;
-  var specialRegex = /[!@#$%^&*(),.?":{}|<>]/;
+  const minLength = 10;
+  const numberRegex = /\d/;
+  const specialRegex = /[!@#$%^&*(),.?":{}|<>]/;
 
   // Check if the password meets all criteria
   if (
